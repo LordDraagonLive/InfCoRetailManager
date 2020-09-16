@@ -9,6 +9,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "InfCoData", "InfCoData\InfC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfCoDesktopClient", "InfCoDesktopClient\InfCoDesktopClient.csproj", "{8379AEB2-E0C1-4F95-ABDE-595E05CFA501}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniumDataManager.Library", "InfiniumDataManager.Library\InfiniumDataManager.Library.csproj", "{C8A37A40-621A-4326-8385-022556066A68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{8379AEB2-E0C1-4F95-ABDE-595E05CFA501}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8379AEB2-E0C1-4F95-ABDE-595E05CFA501}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8379AEB2-E0C1-4F95-ABDE-595E05CFA501}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8A37A40-621A-4326-8385-022556066A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8A37A40-621A-4326-8385-022556066A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8A37A40-621A-4326-8385-022556066A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8A37A40-621A-4326-8385-022556066A68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
