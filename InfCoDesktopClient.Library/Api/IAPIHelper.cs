@@ -1,10 +1,11 @@
-﻿using InfCoDesktopClient.Models;
+﻿using InfCoDesktopClient.Library.Models;
 using System.Threading.Tasks;
 
-namespace InfCoDesktopClient.Helpers
+namespace InfCoDesktopClient.Library.Api
 {
     public interface IAPIHelper
     {
         Task<AuthenticatedUser> Authenticate(string username, string password);
+        Task GetLoggedInUserInfo(string token);
     }
 }
