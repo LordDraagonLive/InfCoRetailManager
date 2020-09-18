@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using InfCoDesktopClient.Helpers;
+using InfCoDesktopClient.Library.Api;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -95,6 +96,10 @@ namespace InfCoDesktopClient.ViewModels
             {
                 ErrorMessage = "";
                 var result = await _apiHelper.Authenticate(UserName, Password);
+
+                // Capture more info about the user
+                await _apiHelper.GetLoggedInUserInfo(result.Access_Token);
+
 
             }
             catch (Exception ex)
