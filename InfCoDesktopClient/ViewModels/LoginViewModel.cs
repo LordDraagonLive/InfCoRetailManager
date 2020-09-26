@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using InfCoDesktopClient.EventModels;
 using InfCoDesktopClient.Helpers;
 using InfCoDesktopClient.Library.Api;
 using System;
@@ -16,11 +17,13 @@ namespace InfCoDesktopClient.ViewModels
         private string _password;
         private IAPIHelper _apiHelper;
         private string _errorMessage;
+        private IEventAggregator _events;
 
 
-        public LoginViewModel(IAPIHelper apiHelper)
+        public LoginViewModel(IAPIHelper apiHelper, IEventAggregator events)
         {
             _apiHelper = apiHelper;
+            _events = events;
         }
 
 
@@ -100,6 +103,8 @@ namespace InfCoDesktopClient.ViewModels
                 // Capture more info about the user
                 await _apiHelper.GetLoggedInUserInfo(result.Access_Token);
 
+                // An empty event model that only used to show that this event took place.
+                _events.PublishOnUIThread(new LogOnEvent());
 
             }
             catch (Exception ex)
