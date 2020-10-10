@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using InfCoDesktopClient.Helpers;
 using InfCoDesktopClient.Library.Api;
+using InfCoDesktopClient.Library.Helpers;
 using InfCoDesktopClient.Library.Models;
 using InfCoDesktopClient.ViewModels;
 using System;
@@ -36,6 +37,7 @@ namespace InfCoDesktopClient
                 .Singleton<IWindowManager, WindowManager>()
                 .Singleton<IEventAggregator, EventAggregator>()
                 .Singleton<ILoggedInUserModel,LoggedInUserModel>()
+                .Singleton<IConfigHelper, ConfigHelper>()
                 .Singleton<IAPIHelper, APIHelper>();
 
             GetType().Assembly.GetTypes()
