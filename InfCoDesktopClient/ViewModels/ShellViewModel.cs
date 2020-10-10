@@ -12,20 +12,21 @@ namespace InfCoDesktopClient.ViewModels
     {
         private IEventAggregator _events;
         private SalesViewModel _salesVM;
-        private SimpleContainer _container;
+        //private SimpleContainer _container;
 
-        public ShellViewModel(IEventAggregator events, SalesViewModel salesVM,
-            SimpleContainer container)
+        public ShellViewModel(IEventAggregator events, SalesViewModel salesVM)
         {
             _events = events;
             _salesVM = salesVM;
-            _container = container;
+            //_container = container;
 
             // Subscribe using the current instance to the log on events and other events
             _events.Subscribe(this);
 
+            // Replaced simple container with IoC instead
+            //ActivateItem(_container.GetInstance<LoginViewModel>());
 
-            ActivateItem(_container.GetInstance<LoginViewModel>());
+            ActivateItem(IoC.Get<LoginViewModel>());
         }
 
         public void Handle(LogOnEvent message)
