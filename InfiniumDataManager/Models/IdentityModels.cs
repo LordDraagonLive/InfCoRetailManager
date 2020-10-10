@@ -21,7 +21,7 @@ namespace InfiniumDataManager.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("InfCoEFData", throwIfV1Schema: false)
         {
         }
         
